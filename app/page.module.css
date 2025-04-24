@@ -166,3 +166,22 @@ a.secondary {
     filter: invert();
   }
 }
+
+
+.list li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 3em;
+  padding: 0 15px;
+  border-bottom: 1px solid #ccc;
+}
+.category {
+  display: inline-block;
+  width: 6em;
+  height: 1.5em;
+  margin-right: 10px;
+  background-color: #eee;
+  font-size: 8px;
+  text-align: center;
+}
