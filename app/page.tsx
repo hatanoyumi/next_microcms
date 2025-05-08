@@ -12,7 +12,7 @@ type Props = {
 // micro CMSからブログ記事を取得
 async function getBlogPosts(): Promise<Props[]> {
   const data = await client.get({
-    endpoint: 'blog', // 'blog'はmicro CMSのエンドポイント名
+    endpoint: 'articles', // 'blog'はmicro CMSのエンドポイント名
     queries: {
       fields: 'id,title,category', // idとtitleを取得（,の後にスペース入れないこと）
       limit: 5, // 最新の５件を取得
