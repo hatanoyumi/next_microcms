@@ -32,7 +32,7 @@ export default async function Home() {
         {posts.map((post) => (
           <li key={post.id}>
             {/* 記事へのリンクを生成 */}
-            <Link href={`/blog/${post.id}`}>
+            <Link href={`/articles/${post.id}`}>
               {/* カテゴリ */}
               <span className={styles.category}>{post.category && post.category.name}</span>
               {/* タイトルを表示 */}

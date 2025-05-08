@@ -14,7 +14,7 @@ type Props = {
 // microCMSから特定の記事を取得
 async function getBlogPosts(id: string): Promise<Props> {
   const data = await client.get({
-    endpoint: `blog/${id}`,
+    endpoint: `articles/${id}`,
   });
 
   return data;
@@ -44,7 +44,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ id: s
 
 // 静的パスを生成
 export async function generateStaticParams() {
-  const contentIds = await client.getAllContentIds({ endpoint: 'blog' });
+  const contentIds = await client.getAllContentIds({ endpoint: 'articles' });
 
   return contentIds.map((contentId) => ({
     id: contentId, // 各記事のIDをパラメータとして返す
